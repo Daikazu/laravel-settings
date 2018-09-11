@@ -18,7 +18,7 @@ class LaravelSettings
     }
 
 
-    public function store($group, $key, $value)
+    static public function store($group, $key, $value)
     {
 
         $key = implode('.', [str_slug($group), $key]);

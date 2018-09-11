@@ -19,9 +19,9 @@ class CreateSettingsTable extends Migration
             $table->unsignedInteger('model_id')->nullable();
             $table->string('key')->unique();
             $table->text('value')->nullable();
-            $table->string('display_name');
+            $table->string('display_name')->nullable();
             $table->text('details')->nullable()->default(null);
-            $table->string('type');
+            $table->string('type')->nullable();
             $table->integer('order')->default('1');
             $table->string('group')->nullable();
         });
