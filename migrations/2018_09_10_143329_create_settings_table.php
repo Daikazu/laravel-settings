@@ -1,8 +1,8 @@
 <?php
 
-use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
 
 class CreateSettingsTable extends Migration
 {
@@ -13,15 +13,17 @@ class CreateSettingsTable extends Migration
      */
     public function up()
     {
-        Schema::table('settings', function (Blueprint $table) {
+        Schema::create('settings', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('model_type')->nullable();
+            $table->unsignedInteger('model_id')->nullable();
             $table->string('key')->unique();
             $table->text('value')->nullable();
             $table->string('display_name');
             $table->text('details')->nullable()->default(null);
             $table->string('type');
-            $table->string('group')->nullable()->after('order');
             $table->integer('order')->default('1');
+            $table->string('group')->nullable();
         });
     }
 

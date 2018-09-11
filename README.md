@@ -1,7 +1,7 @@
 # Laravel Settings WIP Under Development
 
 [![Build Status](https://travis-ci.org/daikazu/laravel-settings.svg?branch=master)](https://travis-ci.org/daikazu/laravel-settings)
-[![styleci](https://styleci.io/repos/CHANGEME/shield)](https://styleci.io/repos/CHANGEME)
+[![styleci](https://styleci.io/repos/147879135/shield)](https://styleci.io/repos/147879135)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/daikazu/laravel-settings/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/daikazu/laravel-settings/?branch=master)
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/CHANGEME/mini.png)](https://insight.sensiolabs.com/projects/CHANGEME)
 [![Coverage Status](https://coveralls.io/repos/github/daikazu/laravel-settings/badge.svg?branch=master)](https://coveralls.io/github/daikazu/laravel-settings?branch=master)

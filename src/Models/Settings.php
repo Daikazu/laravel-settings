@@ -1,11 +1,10 @@
 <?php
 
-
 namespace Daikazu\LaravelSettings\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Settings extends Model
+class Setting extends Model
 {
 
     protected $table = 'settings';
@@ -13,5 +12,20 @@ class Settings extends Model
     protected $guarded = ['id'];
 
     public $timestamps = false;
+
+
+    public function settingable()
+    {
+        return $this->morphTo();
+    }
+
+
+
+
+
+
+
+
+
 
 }

@@ -11,17 +11,33 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
         $this->publishes([
             self::CONFIG_PATH => config_path('laravel-settings.php'),
         ], 'config');
+
+
+        $this->loadMigrationsFrom(__DIR__. '/../migrations');
+
+
+
     }
 
     public function register()
     {
+
         $this->mergeConfigFrom(
             self::CONFIG_PATH,
             'laravel-settings'
         );
 
+        require_once __DIR__.'/helpers.php';
+
+
         $this->app->bind('laravel-settings', function () {
             return new LaravelSettings();
         });
+
+
+
+
     }
+
+
 }
